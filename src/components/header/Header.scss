@@ -1,0 +1,35 @@
+header{
+    background: #FEF159;
+    height: 39px;
+    padding: 10px 0;
+    .container{
+        display: flex;
+        justify-content: left;
+        h1{
+            height: 34px;
+            margin-right: 20px;
+            img{
+                height: 100%;
+            }
+        }
+        form{
+            position: relative;
+            width: 100%;
+            input{
+                width: 100%;
+                height: 34px;
+                box-sizing: border-box;
+                padding: 0 26px 0 10px;
+                font-size: 16px;
+            }
+            button[type=submit]{
+                height: 30px;
+                position: absolute;
+                top: 1px;
+                right: 1px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

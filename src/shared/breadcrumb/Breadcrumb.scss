@@ -1,0 +1,19 @@
+.category_path{
+    display: flex;
+    padding: 10px 0;
+    li{
+        list-style: none;
+        color: #9A9A9A;
+        margin: 0 5px;
+        font-size: 14px;
+        &:before{
+            content: '=> ';
+        }
+    }
+    li:first-child{
+        margin-left: 0;
+    }
+    li:first-child:before{
+        content: '';
+    }
+}
