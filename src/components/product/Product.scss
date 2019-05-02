@@ -1,9 +1,8 @@
-$grey: #666666;
-$blue: #3383FA;
+@import '../../assets/styles/colors';
 
 .product-view{
     display: flex;
-    background: #ffffff;
+    background: $white;
     margin-top: 5px;
     padding: 30px;
     border-radius: 3px;
@@ -39,12 +38,12 @@ $blue: #3383FA;
             margin-bottom: 12px;
         }
         .price{
-            font-size: 28px;
+            font-size: 46px;
             margin-bottom: 30px;
         }
         .btn_shop{
             background: $blue;
-            color: #ffffff;
+            color: $white;
             border: none;
             padding: 10px 70px;
             border-radius: 3px;

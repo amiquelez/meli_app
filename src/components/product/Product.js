@@ -8,12 +8,11 @@ const Product = props => {
     const id = props.match.params.id;
     const url = `http://localhost:8080/api/items/${id}`;
     const [data, loading] = useFetch(url);
-    const {title, condition, sold_quantity, description, picture, price} = data;
-    console.log(data);
+    const {title, condition, sold_quantity, description, picture, price, categories} = data;
 
     return (
         <React.Fragment>
-            <Breadcrumb />
+            <Breadcrumb categories={categories} />
             <div className="product-view">
             {loading ? (
                 <p>loading...</p>

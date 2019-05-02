@@ -1,5 +1,7 @@
+@import '../../assets/styles/colors';
+
 header{
-    background: #FEF159;
+    background: $yellow;
     height: 39px;
     padding: 10px 0;
     .container{
@@ -20,10 +22,11 @@ header{
                 height: 34px;
                 box-sizing: border-box;
                 padding: 0 26px 0 10px;
-                font-size: 16px;
+                font-size: 18px;
+                color: $black;
             }
             button[type=submit]{
-                height: 30px;
+                height: calc(100% - 2px);
                 position: absolute;
                 top: 1px;
                 right: 1px;

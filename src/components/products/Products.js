@@ -4,6 +4,7 @@ import './Products.scss';
 import Price from '../../shared/price/Price';
 import Breadcrumb from '../../shared/breadcrumb/Breadcrumb';
 import { Link } from 'react-router-dom';
+import icoShipping from '../../assets/images/ic_shipping.png';
 
 const Products = props => {
     const query = new URLSearchParams(props.location.search);
@@ -20,7 +21,7 @@ const Products = props => {
             ) : (
                 <ul className="product_list">
                 {data.items.map(item => {
-                    const {id, picture, title, price, free_shipping} = item;
+                    const {id, picture, title, price, free_shipping, city} = item;
                     return (
                         <li key={id}>
                             <Link to={"/items/" + id}>
@@ -30,11 +31,12 @@ const Products = props => {
                                     </div>
                                     <div className="details">
                                             <h2>{title}</h2>
-                                            <Price price={price} />
+                                            <div className="price-box">
+                                                <Price price={price} />
+                                                { free_shipping ? <img src={icoShipping} className="shipping" alt="Free Shipping" /> : null }
+                                            </div>
                                     </div>
-                                    <div className="shipping">
-                                        { free_shipping ? "Envío gratis" : '' }
-                                    </div>
+                                    <div className="city">{city}</div>
                                 </div>
                             </Link>
                         </li>

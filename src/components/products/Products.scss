@@ -1,34 +1,47 @@
+@import '../../assets/styles/colors';
+
 .results-container{
-    margin-top: 5px;
     .product_list li .list_item{
         display: flex;
-        background: #ffffff;
-        padding: 30px;
+        background: $white;
+        padding: 16px;
         margin-bottom: 2px;
         border-radius: 3px;
         .details{
             display: flex;
             flex-direction: column;
-            width: 700px;
+            width: 70%;
             h2{
                 font-size: 18px;
                 font-weight: normal;
                 order: 1;
             }
-            .price{
-                margin-bottom: 20px;
+            .price-box{
+                display: flex;
+                margin-top: 16px;
+                .price{
+                    margin-bottom: 32px;
+                }
+                .shipping{
+                    width: 18px;
+                    height: 18px;
+                    margin-left: 8px;
+                    position: relative;
+                    top: 2px;
+                }
             }
+        }
+        .city{
+            font-size: 12px;
         }
         .thumb-container{
-            margin-right: 18px;
-            width: 90px;
+            margin-right: 16px;
+            width: 180px;
+            height: 180px;
             img{
                 width: 100%;
+                border-radius: 4px;
             }
-        }
-        .shipping{
-            color: #00a650;
-            font-size: 14px;
         }
     }
 }

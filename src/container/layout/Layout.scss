@@ -1,0 +1,12 @@
+@import '../../assets/styles/reset';
+@import '../../assets/styles/colors';
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: $grey_3;
+}
+.container{
+    width: 960px;
+    max-width: 95%;
+    margin: auto;
+}
