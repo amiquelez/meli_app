@@ -23,15 +23,17 @@ header{
                 box-sizing: border-box;
                 padding: 0 26px 0 10px;
                 font-size: 18px;
-                color: $black;
+                color: $black !important;
+                border: none;
             }
             button[type=submit]{
-                height: calc(100% - 2px);
+                height: 100%;
                 position: absolute;
-                top: 1px;
-                right: 1px;
+                top: 0;
+                right: 0;
                 border: none;
                 cursor: pointer;
+                background: $grey_3;
             }
         }
     }

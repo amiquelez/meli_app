@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Price.scss';
 
 const Price = props => {
@@ -11,5 +12,16 @@ const Price = props => {
         </div>
     )
 }
+
+Price.propTypes = {
+    price: PropTypes.shape({
+        currency: PropTypes.string.isRequired,
+        amount: PropTypes.number.isRequired,
+        decimals: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+        ])
+    })
+};
 
 export default Price;
