@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import meliLogo from '../../assets/images/logo.png';
+import meliLogo from '../../assets/images/Logo_ML.png';
 import { useForm } from '../../shared/hooks';
 import { Link } from 'react-router-dom';
 
