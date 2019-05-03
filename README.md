@@ -18,7 +18,7 @@ Run npm install inside the project to install the dependencies
 
 ### `npm start`
 
-Runs npm start to run the project in the development mode.<br>
+Run npm start to run the project in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
