@@ -4,19 +4,21 @@ const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    async function fetchUrl(){
-        try{
-            const response = await fetch(url);
-            const json = await response.json();
-            setData(json);
-            setLoading(false);
-        } catch(error){
-            console.error('There was an error');
-        }
-    }
-
     useEffect(() => {
+
+        async function fetchUrl(){
+            try{
+                const response = await fetch(url);
+                const json = await response.json();
+                setData(json);
+                setLoading(false);
+            } catch(error){
+                console.error('There was an error');
+            }
+        }
+
         fetchUrl();
+        
     }, [url]);
 
     return [data, loading];
