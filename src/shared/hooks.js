@@ -30,11 +30,12 @@ const useForm = (callback) => {
   
     const handleSubmit = e => {
         e.preventDefault();
+        if(!values) return;
         callback();
     };
   
     const handleChange = e => {
-      setValues(e.target.value);
+      setValues(e.target.value.trim());
     };
   
     return {
