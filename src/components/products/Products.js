@@ -20,7 +20,7 @@ const Products = props => {
                 <p>loading...</p>
             ) : (
                 <ul className="product_list">
-                {data.items.map(item => {
+                {data.items.length > 0 ? data.items.map(item => {
                     const {id, picture, title, price, free_shipping, city} = item;
                     return (
                         <li key={id}>
@@ -41,7 +41,7 @@ const Products = props => {
                             </Link>
                         </li>
                     );
-                })}
+                }) : <p>No hay publicaciones que coincidan con tu búsqueda: <b>{filter}</b></p>}
                 </ul>
             )}
             </div>

@@ -8,11 +8,13 @@ const useFetch = (url) => {
 
         async function fetchUrl(){
             try{
+                setLoading(true);
                 const response = await fetch(url);
                 const json = await response.json();
                 setData(json);
                 setLoading(false);
             } catch(error){
+                setLoading(false);
                 console.error('There was an error');
             }
         }
